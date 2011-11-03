@@ -1,3 +1,9 @@
+# revision 16896
+# category Package
+# catalog-ctan /macros/latex/contrib/crosswrd
+# catalog-date 2010-02-01 17:14:28 +0100
+# catalog-license lppl
+# catalog-version 3.0
 Name:		texlive-crosswrd
 Version:	3.0
 Release:	1
@@ -51,6 +57,7 @@ properly. Brian Hamilton Kelly's original was written for LaTeX
 #- source
 %doc %{_texmfdistdir}/source/latex/crosswrd/crosswrd.dtx
 %doc %{_texmfdistdir}/source/latex/crosswrd/crosswrd.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -61,3 +68,5 @@ properly. Brian Hamilton Kelly's original was written for LaTeX
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
