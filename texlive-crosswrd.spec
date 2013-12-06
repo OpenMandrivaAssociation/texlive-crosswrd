@@ -6,7 +6,7 @@
 # catalog-version 3.0
 Name:		texlive-crosswrd
 Version:	3.0
-Release:	5
+Release:	6
 Summary:	Macros for typesetting crossword puzzles
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/crosswrd
