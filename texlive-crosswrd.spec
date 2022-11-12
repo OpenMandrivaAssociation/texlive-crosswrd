@@ -1,19 +1,13 @@
-# revision 16896
-# category Package
-# catalog-ctan /macros/latex/contrib/crosswrd
-# catalog-date 2010-02-01 17:14:28 +0100
-# catalog-license lppl
-# catalog-version 3.0
 Name:		texlive-crosswrd
-Version:	3.0
-Release:	11
+Version:	16896
+Release:	1
 Summary:	Macros for typesetting crossword puzzles
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/crosswrd
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/crosswrd.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/crosswrd.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/crosswrd.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/crosswrd.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/crosswrd.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/crosswrd.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +20,12 @@ properly. Brian Hamilton Kelly's original was written for LaTeX
 2.09, and needed to be updated to run with current LaTeX.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -50,24 +44,11 @@ properly. Brian Hamilton Kelly's original was written for LaTeX
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.0-2
-+ Revision: 750630
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 3.0-1
-+ Revision: 718167
-- texlive-crosswrd
-- texlive-crosswrd
-- texlive-crosswrd
-- texlive-crosswrd
-
