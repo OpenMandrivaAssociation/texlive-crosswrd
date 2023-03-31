@@ -1,6 +1,6 @@
 Name:		texlive-crosswrd
 Version:	16896
-Release:	1
+Release:	2
 Summary:	Macros for typesetting crossword puzzles
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/crosswrd
