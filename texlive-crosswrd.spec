@@ -3,7 +3,7 @@ Version:	16896
 Release:	2
 Summary:	Macros for typesetting crossword puzzles
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/crosswrd
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/crosswrd
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/crosswrd.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/crosswrd.doc.r%{version}.tar.xz
